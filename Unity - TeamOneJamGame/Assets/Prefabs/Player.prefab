@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7151630777054275299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2674477226109639690}
+  - component: {fileID: 6958198109723392927}
+  m_Layer: 0
+  m_Name: Player Variables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2674477226109639690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151630777054275299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8164872615499909589}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6958198109723392927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151630777054275299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe2b16044a04efba6795e323236dc60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SaveUniqueID:
+    m_Save:
+      m_Save: 0
+    m_UniqueID:
+      m_SerializedID:
+        m_String: b0af3f52-75b6-4296-8b0a-c9eb5be819ed
+  m_Runtime:
+    m_List:
+      m_Source:
+      - rid: 5192830288359325790
+  references:
+    version: 2
+    RefIds:
+    - rid: 5192830288359325790
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 5192830288359325792
+        m_Name:
+          m_String: TargetSnowBlock
+    - rid: 5192830288359325792
+      type: {class: ValueGameObject, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: {fileID: 0}
 --- !u!1 &8164872613966389972
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +104,7 @@ Transform:
   m_Children:
   - {fileID: 8164872613972158206}
   m_Father: {fileID: 8164872615499909589}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8164872613972158207
 GameObject:
@@ -143,6 +217,7 @@ GameObject:
   - component: {fileID: 8164872614596849234}
   - component: {fileID: 8164872614596849235}
   - component: {fileID: 8164872614596849232}
+  - component: {fileID: 2442623098903594230}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -229,6 +304,58 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2442623098903594230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164872614596849246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5192830288359325795
+  m_InBackground: 1
+  m_TriggerEvent:
+    rid: 5192830288359325794
+  references:
+    version: 2
+    RefIds:
+    - rid: 5192830288359325794
+      type: {class: EventTriggerEnterTag, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Tag:
+          m_Value: Snow
+    - rid: 5192830288359325795
+      type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830288359325798
+        m_From:
+          m_Property:
+            rid: 5192830288359325797
+    - rid: 5192830288359325797
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+    - rid: 5192830288359325798
+      type: {class: SetGameObjectLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 6958198109723392927}
+          m_Name:
+            m_String: TargetSnowBlock
+            m_ID: -80200115
 --- !u!1 &8164872615318611527
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +386,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8164872615499909589}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8164872615318611545
 MonoBehaviour:
@@ -353,6 +480,8 @@ GameObject:
   - component: {fileID: 8164872615499909591}
   - component: {fileID: 8164872615499909588}
   - component: {fileID: 4691483223759355224}
+  - component: {fileID: 8882597858277892732}
+  - component: {fileID: -6380902050707467676}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -372,6 +501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2674477226109639690}
   - {fileID: 8164872613966389975}
   - {fileID: 8164872615318611526}
   m_Father: {fileID: 0}
@@ -392,6 +522,7 @@ MonoBehaviour:
   playerSpeed: 2
   jumpHeight: 1
   gravityValue: -9.81
+  inSnow: 0
 --- !u!33 &8164872615499909586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -615,7 +746,7 @@ MonoBehaviour:
     - rid: 5192830288359325726
       type: {class: InstructionGameObjectSetGameObject, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_IsExpanded: 1
+        m_IsExpanded: 0
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Set:
@@ -639,8 +770,236 @@ MonoBehaviour:
     - rid: 5192830288359325731
       type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_IsExpanded: 1
+        m_IsExpanded: 0
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Signal:
           m_String: PlayerJoins
+--- !u!114 &8882597858277892732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164872615499909585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5192830288359325754
+    - rid: 5192830288359325741
+    - rid: 5192830288359325759
+  m_InBackground: 1
+  m_TriggerEvent:
+    rid: 5192830288359325740
+  references:
+    version: 2
+    RefIds:
+    - rid: 5192830288359325740
+      type: {class: EventTriggerEnterTag, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Tag:
+          m_Value: Snow
+    - rid: 5192830288359325741
+      type: {class: InstructionArithmeticDivideNumbers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830288359325747
+        m_Value1:
+          m_Property:
+            rid: 5192830288359325746
+        m_Value2:
+          m_Property:
+            rid: 5192830288359325748
+    - rid: 5192830288359325746
+      type: {class: GetDecimalReflectionFieldFloat, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: playerSpeed
+    - rid: 5192830288359325747
+      type: {class: SetNumberReflectionFieldFloat, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: playerSpeed
+    - rid: 5192830288359325748
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 2
+    - rid: 5192830288359325754
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 5192830288359325755
+    - rid: 5192830288359325755
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 5192830288359325758
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 5192830288359325757
+    - rid: 5192830288359325757
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 5192830288359325758
+      type: {class: GetBoolReflectionFieldBool, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: inSnow
+    - rid: 5192830288359325759
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830288359325762
+        m_From:
+          m_Property:
+            rid: 5192830288359325761
+    - rid: 5192830288359325761
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5192830288359325762
+      type: {class: SetBoolReflectionFieldBool, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: inSnow
+--- !u!114 &-6380902050707467676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164872615499909585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 5192830288359325776
+    - rid: 5192830288359325769
+    - rid: 5192830288359325765
+  m_InBackground: 1
+  m_TriggerEvent:
+    rid: 5192830288359325764
+  references:
+    version: 2
+    RefIds:
+    - rid: 5192830288359325764
+      type: {class: EventTriggerExitTag, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Tag:
+          m_Value: Snow
+    - rid: 5192830288359325765
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830288359325768
+        m_From:
+          m_Property:
+            rid: 5192830288359325767
+    - rid: 5192830288359325767
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 5192830288359325768
+      type: {class: SetBoolReflectionFieldBool, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: inSnow
+    - rid: 5192830288359325769
+      type: {class: InstructionArithmeticMultiplyNumbers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830288359325773
+        m_Value1:
+          m_Property:
+            rid: 5192830288359325774
+        m_Value2:
+          m_Property:
+            rid: 5192830288359325775
+    - rid: 5192830288359325773
+      type: {class: SetNumberReflectionFieldFloat, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: playerSpeed
+    - rid: 5192830288359325774
+      type: {class: GetDecimalReflectionFieldFloat, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: playerSpeed
+    - rid: 5192830288359325775
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 2
+    - rid: 5192830288359325776
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 5192830288359325777
+    - rid: 5192830288359325777
+      type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 5192830288359325780
+        m_Comparison: 0
+        m_CompareTo:
+          m_Property:
+            rid: 5192830288359325779
+    - rid: 5192830288359325779
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5192830288359325780
+      type: {class: GetBoolReflectionFieldBool, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: inSnow

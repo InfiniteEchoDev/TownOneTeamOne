@@ -12,6 +12,8 @@ public class HerderController : MonoBehaviour
 	private float jumpHeight = 1.0f;
 	[SerializeField]
 	private float gravityValue = -9.81f;
+	[SerializeField]
+	private bool inSnow = false;
 
 	private CharacterController controller;
 	private Vector3 playerVelocity;
@@ -19,6 +21,7 @@ public class HerderController : MonoBehaviour
 	
 	private Vector2 movementInput = Vector2.zero;
 	private bool jumped = false;
+	
 
 	private void Start()
 	{
