@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using GameCreator.Runtime.Common;
+using GameCreator.Runtime.VisualScripting;
 
 [RequireComponent(typeof(CharacterController))]
 public class HerderController : MonoBehaviour
@@ -14,6 +16,8 @@ public class HerderController : MonoBehaviour
 	private float gravityValue = -9.81f;
 	[SerializeField]
 	private bool inSnow = false;
+	[SerializeField]
+	private Actions ShovelingAction;
 
 	private CharacterController controller;
 	private Vector3 playerVelocity;
@@ -21,7 +25,8 @@ public class HerderController : MonoBehaviour
 	
 	private Vector2 movementInput = Vector2.zero;
 	private bool jumped = false;
-	
+	[SerializeField]
+	private bool shoveling = false;
 
 	private void Start()
 	{
@@ -35,6 +40,12 @@ public class HerderController : MonoBehaviour
 	public void OnJump(InputAction.CallbackContext context) {
 		jumped = context.ReadValue<bool>();
 		jumped = context.action.triggered;
+	}
+	
+	public void OnShovel(InputAction.CallbackContext context) {
+		//shoveling = context.ReadValue<bool>();
+		shoveling = context.action.IsPressed();
+		
 	}
 
 	void Update()
@@ -57,6 +68,10 @@ public class HerderController : MonoBehaviour
 		if (jumped && groundedPlayer)
 		{
 			playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+		}
+
+		if (shoveling) {
+			ShovelingAction.Invoke(ShovelingAction.gameObject);
 		}
 
 		playerVelocity.y += gravityValue * Time.deltaTime;

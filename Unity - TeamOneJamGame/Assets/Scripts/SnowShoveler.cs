@@ -13,7 +13,7 @@ public class SnowShoveler : MonoBehaviour
 	{
 		if ( other.tag == "Snow")
 		{
-			Debug.Log("snow detected");
+			//Debug.Log("snow detected");
 			snowBlock = other.gameObject;
 			hasSnow = true;
 		}
