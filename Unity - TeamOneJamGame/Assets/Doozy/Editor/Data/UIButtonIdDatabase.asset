@@ -9,7 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defe2424e2294add87e7fc8f38137ba9, type: 3}
-  m_Name: NodySettings
+  m_Script: {fileID: 11500000, guid: 4bd14fc30d004417a423cfdef2bd9ccf, type: 3}
+  m_Name: UIButtonIdDatabase
   m_EditorClassIdentifier: 
-  Graph: {fileID: 0}
+  Database:
+    Items:
+    - Category: None
+      Name: None
+    - Category: UI
+      Name: MainMenu
+    - Category: UI
+      Name: Setting
