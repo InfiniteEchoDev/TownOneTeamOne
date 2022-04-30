@@ -13,10 +13,4 @@ MonoBehaviour:
   m_Name: UIButtonIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items:
-    - Category: None
-      Name: None
-    - Category: UI
-      Name: MainMenu
-    - Category: UI
-      Name: Setting
+    Items: []
