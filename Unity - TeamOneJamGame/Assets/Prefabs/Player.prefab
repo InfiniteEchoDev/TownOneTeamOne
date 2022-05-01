@@ -162,7 +162,7 @@ MonoBehaviour:
     - rid: 5192830288359325835
       type: {class: GetRotationEuler, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Rotation: {x: -45, y: 0, z: 0}
+        m_Rotation: {x: -45, y: -20, z: 0}
     - rid: 5192830288359325836
       type: {class: InstructionTransformChangeRotation, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -190,7 +190,7 @@ MonoBehaviour:
     - rid: 5192830288359325838
       type: {class: GetRotationEuler, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Rotation: {x: 0, y: 0, z: 0}
+        m_Rotation: {x: 0, y: -20, z: 0}
     - rid: 5192830288359325864
       type: {class: InstructionLogicRunConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -313,6 +313,37 @@ MonoBehaviour:
       type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Conditions: {fileID: 1388626778683877094}
+--- !u!1 &5892168332450982227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7592360278191254921}
+  m_Layer: 0
+  m_Name: SkinLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7592360278191254921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892168332450982227}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8164872615499909589}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7151630777054275299
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,15 +441,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8164872613966389972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.134, z: 0}
+  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0.04, y: -0.407, z: -0.221}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8164872613972158206}
+  - {fileID: 2553652429299007897}
   m_Father: {fileID: 8164872615499909589}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
 --- !u!1 &8164872613972158207
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8164872613972158206
 Transform:
   m_ObjectHideFlags: 0
@@ -621,13 +653,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8164872615499909585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.01, y: 1.25, z: -15.26}
+  m_LocalPosition: {x: -8.01, y: 1.066, z: -15.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2674477226109639690}
   - {fileID: 8164872613966389975}
   - {fileID: 2517420308546967196}
+  - {fileID: 7592360278191254921}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -643,12 +676,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f54333b17a2f4b75a23d434353e245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
+  playerSpeed: 3
   jumpHeight: 1
   gravityValue: -9.81
   inSnow: 0
   ShovelingAction: {fileID: 4022591211595441167}
+  skinLocation: {fileID: 7592360278191254921}
+  globalVars: {fileID: 0}
   shoveling: 0
+  costumeOptions:
+  - {fileID: 919132149155446097, guid: 671a7b1e060e044528aaaaf943db7b78, type: 3}
+  - {fileID: 919132149155446097, guid: 926044382f2f9424794b414d919af657, type: 3}
+  MateoSpawned: 0
 --- !u!33 &8164872615499909586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -664,7 +703,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8164872615499909585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -861,6 +900,8 @@ MonoBehaviour:
     m_Instructions:
     - rid: 5192830288359325726
     - rid: 5192830288359325731
+    - rid: 5192830292604747780
+    - rid: 5192830292604747784
   m_InBackground: 1
   m_TriggerEvent:
     rid: 5192830288359325722
@@ -901,6 +942,53 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Signal:
           m_String: PlayerJoins
+    - rid: 5192830292604747780
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8164872615499909590}
+              m_TargetAssemblyTypeName: HerderController, Assembly-CSharp
+              m_MethodName: OnSpawnCharacter
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 5192830292604747784
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830292604747787
+        m_From:
+          m_Property:
+            rid: 5192830292604747786
+    - rid: 5192830292604747786
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5192830292604747787
+      type: {class: SetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable: {fileID: 11400000, guid: 88963d5a81f2e4005a94a476e4d551ee, type: 2}
+          m_Name:
+            m_String: MateoSpawned
+            m_ID: -9990611
 --- !u!114 &8882597858277892732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +1018,7 @@ MonoBehaviour:
     - rid: 5192830288359325900
       type: {class: InstructionLogicRunConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_IsExpanded: 0
+        m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Conditions:
@@ -1002,7 +1090,7 @@ MonoBehaviour:
     - rid: 5192830288359325887
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_IsExpanded: 0
+        m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Description: move out of snow
@@ -1012,6 +1100,7 @@ MonoBehaviour:
         m_InstructionList:
           m_Instructions:
           - rid: 5192830288359325892
+          - rid: 5192830292604747776
     - rid: 5192830288359325888
       type: {class: ConditionMathCompareBooleans, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -1066,7 +1155,29 @@ MonoBehaviour:
     - rid: 5192830288359325899
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 2
+        m_Value: 3
+    - rid: 5192830292604747776
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 5192830292604747779
+        m_From:
+          m_Property:
+            rid: 5192830292604747778
+    - rid: 5192830292604747778
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 5192830292604747779
+      type: {class: SetBoolReflectionFieldBool, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 8164872615499909590}
+          m_Member: inSnow
 --- !u!114 &4145714807853542744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,7 +1199,7 @@ MonoBehaviour:
     - rid: 5192830288359325871
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
-        m_IsExpanded: 0
+        m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Description: move into snow
@@ -1153,7 +1264,7 @@ MonoBehaviour:
     - rid: 5192830288359325882
       type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
-        m_Value: 2
+        m_Value: 3
     - rid: 5192830288359325883
       type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -1176,3 +1287,65 @@ MonoBehaviour:
         m_Field:
           m_Component: {fileID: 8164872615499909590}
           m_Member: inSnow
+--- !u!1001 &2664684192668001906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8164872613966389975}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.093
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.347
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.43045947
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.56098557
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.43045977
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.560985
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+      propertyPath: m_Name
+      value: Shovel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+--- !u!4 &2553652429299007897 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
+  m_PrefabInstance: {fileID: 2664684192668001906}
+  m_PrefabAsset: {fileID: 0}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
+using GameCreator.Runtime.Variables;
 
 [RequireComponent(typeof(CharacterController))]
 public class HerderController : MonoBehaviour
@@ -18,6 +19,10 @@ public class HerderController : MonoBehaviour
 	private bool inSnow = false;
 	[SerializeField]
 	private Actions ShovelingAction;
+	[SerializeField]
+	private Transform skinLocation;
+	[SerializeField]
+	private GlobalNameVariables globalVars;
 
 	private CharacterController controller;
 	private Vector3 playerVelocity;
@@ -27,7 +32,10 @@ public class HerderController : MonoBehaviour
 	private bool jumped = false;
 	[SerializeField]
 	private bool shoveling = false;
-
+	[SerializeField]
+	List<GameObject>	costumeOptions = new List<GameObject>();
+	public bool MateoSpawned = false;
+	
 	private void Start()
 	{
 		controller = gameObject.GetComponent<CharacterController>();
@@ -46,6 +54,26 @@ public class HerderController : MonoBehaviour
 		//shoveling = context.ReadValue<bool>();
 		shoveling = context.action.IsPressed();
 		
+	}
+	
+	public void OnSpawnCharacter() {
+		if ( costumeOptions.Count > 0 ) {
+			int randomSkin = 0;
+			
+			if ( (bool)globalVars.Get("MateoSpawned") ){
+				randomSkin = Random.Range(1,costumeOptions.Count);
+			} else
+				randomSkin = 0;
+				
+			GameObject spawnedSkin = Instantiate(costumeOptions[randomSkin],skinLocation);
+			Vector3 newPosition = Vector3.zero;
+			spawnedSkin.transform.localPosition = newPosition;
+			
+			if (randomSkin == 0) {
+				//globalVars.Set("MateoSpawned", );
+				MateoSpawned = true;
+			}
+		}
 	}
 
 	void Update()

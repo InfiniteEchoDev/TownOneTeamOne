@@ -21,6 +21,7 @@ MonoBehaviour:
   m_NameList:
     m_Source:
     - rid: 5192830288359325723
+    - rid: 5192830292604747781
   references:
     version: 2
     RefIds:
@@ -41,3 +42,20 @@ MonoBehaviour:
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Value: {fileID: 0}
+    - rid: 5192830292604747781
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 5192830292604747783
+        m_Name:
+          m_String: MateoSpawned
+    - rid: 5192830292604747783
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
