@@ -31,7 +31,7 @@ public class InputMgr : Singleton<InputMgr> {
 				Mathf.Infinity,
 				1 << LayerMgr.MouseClickSurfaceLayer
 			) ) {
-				//OnMouseClickOnUILayer?.Invoke( hit.point );
+				OnMouseClickOnUILayer?.Invoke( hit.point );
 			}
 		//if( Physics.Raycast )
 
