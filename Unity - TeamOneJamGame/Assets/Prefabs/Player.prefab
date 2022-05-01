@@ -173,7 +173,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4277505486925638188}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &8866323376761369895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,9 +1306,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8164872615499909590}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HerderController, Assembly-CSharp
-        m_MethodName: OnActivateWhistle
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1821,3 +1821,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2664684192668001906}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2899110854695721763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e9cc728ae270a4a50b3c8823c0fed59e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2664684192668001906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6215395009366772167
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899110854695721763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3708630426613430709, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
