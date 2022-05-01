@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Snow
   - Ice
+  - Shovel
   layers:
   - Default
   - TransparentFX

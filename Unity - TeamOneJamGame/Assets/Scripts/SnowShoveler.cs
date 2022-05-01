@@ -9,8 +9,7 @@ public class SnowShoveler : MonoBehaviour
 	[SerializeField]
 	private bool hasSnow;
 	
-	[SerializeField]
-	HerderController	playerController;
+	public HerderController	playerController;
     
 	private void OnTriggerStay(Collider other)
 	{
@@ -24,6 +23,14 @@ public class SnowShoveler : MonoBehaviour
 		{
 			other.gameObject.GetComponent<BreakIce>().BreakingIce();
 		}
+		if ( other.tag == "Shovel" && playerController.shoveling)
+		{
+			if ( other.gameObject.GetComponent<SnowShoveler>().playerController.shoveling) {
+				Debug.Log("Llama call");
+				AIMgr.Instance.DirectAllLlamasAttentionOnPoint( transform.position );
+			}
+		}
+		
 	}
 
 	private void OnTriggerExit(Collider other)

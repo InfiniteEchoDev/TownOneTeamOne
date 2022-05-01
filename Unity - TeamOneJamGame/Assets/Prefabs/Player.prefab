@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 3397466999337577718}
   m_Layer: 0
   m_Name: Shovel Collider
-  m_TagString: Untagged
+  m_TagString: Shovel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
