@@ -833,7 +833,19 @@ MonoBehaviour:
     m_ActionId: b77313f8-cc20-4ccd-82af-6c27b709077d
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 2d12ec17-88ff-4540-8980-715cdaaae6e1
     m_ActionName: Player/ActivateWhistle[/Mouse/leftButton]
   - m_PersistentCalls:

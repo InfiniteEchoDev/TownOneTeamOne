@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 
 public enum LlamaAttentionState {
@@ -26,7 +27,7 @@ public class AIMgr : Singleton<AIMgr> {
 
 
 
-	NavMeshAgent llamaAgentRef;
+	//NavMeshAgent llamaAgentRef;
 
 	private void Start() {
 
@@ -40,11 +41,23 @@ public class AIMgr : Singleton<AIMgr> {
 
 		InputMgr.Instance.OnMouseClickOnUILayer +=
 			( Vector3 clickPoint ) => {
-				foreach( Llama llama in Llamas ) {
-					//llamaAgentRef = llama.GetComponent<NavMeshAgent>();
-					//llamaAgentRef.SetDestination( clickPoint );
-					llama.BeginAttentionOnPoint( clickPoint );
-				}
+				DirectAllLlamasAttentionOnPoint( clickPoint );
 			};
+	}
+
+	public void DirectAllLlamasAttentionOnPoint( Vector3 pointForAttention ) {
+		foreach( Llama llama in Llamas ) {
+			//llamaAgentRef = llama.GetComponent<NavMeshAgent>();
+			//llamaAgentRef.SetDestination( clickPoint );
+			llama.BeginAttentionOnPoint( pointForAttention );
+		}
+	}
+	//public void DirectAllLlamasAttentionOnPlayer( InputAction.CallbackContext playerContext ) {
+	//}
+
+	public static void TestFcn( Vector3 pointForAttention ) {
+		foreach( Llama llama in FindObjectsOfType<Llama>() ) {
+			llama.BeginAttentionOnPoint( pointForAttention );
+		}
 	}
 }
