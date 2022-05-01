@@ -8,6 +8,8 @@ TagManager:
   - Ice
   - Shovel
   - CallHerd
+  - Crevice
+  - PickUpPoints
   layers:
   - Default
   - TransparentFX

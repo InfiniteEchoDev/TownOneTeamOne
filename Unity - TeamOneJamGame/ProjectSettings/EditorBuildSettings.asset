@@ -8,11 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/MainScene.unity
-    guid: 211be25b1866e6146b9e943d7e2def53
   - enabled: 1
-    path: Assets/Scenes/MainScene - Winston.unity
-    guid: 76822c67db5bbc642870ccf93433e4bf
+    path: Assets/Scenes/Menu Scene.unity
+    guid: fe2bd5cde93cae947aba2bfa9161b05e
+  - enabled: 1
+    path: Assets/Scenes/Day3.unity
+    guid: e1a946ebb4796421b9338661354f6a16
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 8e7023cbe46f2cf43b947f8724ab6e3d, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 8e7023cbe46f2cf43b947f8724ab6e3d,
+      type: 2}
