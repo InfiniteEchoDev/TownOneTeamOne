@@ -28,8 +28,8 @@ public class HerderController : MonoBehaviour
 	
 	private Vector2 movementInput = Vector2.zero;
 	private bool jumped = false;
-	[SerializeField]
-	private bool shoveling = false;
+	
+	public bool shoveling = false;
 	
 	private void Start()
 	{
@@ -62,6 +62,26 @@ public class HerderController : MonoBehaviour
 		if( context.action.triggered ) {
 			AIMgr.Instance.DirectAllLlamasAttentionOnPoint( transform.position );
 		}
+	}
+	
+	void OnTriggerStay(Collider other)
+	{
+		if (other.tag == "Snow")
+		{
+			playerSpeed = 1f;
+		}
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.tag == "Snow")
+		{
+			playerSpeed = 3f;
+		}
+	}
+	
+	public void ResumeSpeed(){
+		playerSpeed = 3f;
 	}
 
 	void Update()
