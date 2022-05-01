@@ -41,14 +41,16 @@ public class Llama : MonoBehaviour {
 	private NavMeshAgent agent;
 
 	private void Awake() {
+	}
+
+	private void Start() {
 		SizeVariation.x = Random.Range( LlamaMgr.Instance.XYZSizeVariationRange.Min, LlamaMgr.Instance.XYZSizeVariationRange.Max );
 		SizeVariation.y = Random.Range( LlamaMgr.Instance.XYZSizeVariationRange.Min, LlamaMgr.Instance.XYZSizeVariationRange.Max );
 		SizeVariation.z = Random.Range( LlamaMgr.Instance.XYZSizeVariationRange.Min, LlamaMgr.Instance.XYZSizeVariationRange.Max );
 
 		Model.transform.localScale = new Vector3( Model.transform.localScale.x * SizeVariation.x, Model.transform.localScale.y * SizeVariation.y, Model.transform.localScale.z * SizeVariation.z );
-	}
 
-	private void Start() {
+
 		if( agent is null )
 			agent = GetComponent<NavMeshAgent>();
 
