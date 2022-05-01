@@ -344,6 +344,183 @@ Transform:
   m_Father: {fileID: 8164872615499909589}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6257762578407206737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469956959857827403}
+  - component: {fileID: 968700001960164956}
+  m_Layer: 0
+  m_Name: SpawnConditions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469956959857827403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257762578407206737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2674477226109639690}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &968700001960164956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257762578407206737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721fb82976bce47f38247178301b66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Branches:
+    m_Branches:
+    - rid: 5192830292604747799
+    - rid: 5192830292604747806
+  references:
+    version: 2
+    RefIds:
+    - rid: 5192830292604747799
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: 
+        m_ConditionList:
+          m_Conditions:
+          - rid: 5192830292604747800
+        m_InstructionList:
+          m_Instructions:
+          - rid: 5192830292604747804
+    - rid: 5192830292604747800
+      type: {class: ConditionMathCompareIntegers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 5192830292604747803
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 5192830292604747802
+    - rid: 5192830292604747802
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 5192830292604747803
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 88963d5a81f2e4005a94a476e4d551ee, type: 2}
+          m_Name:
+            m_String: CharactersSpawned
+            m_ID: 789249562
+    - rid: 5192830292604747804
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8164872615499909590}
+              m_TargetAssemblyTypeName: HerderController, Assembly-CSharp
+              m_MethodName: OnSpawnCharacter
+              m_Mode: 2
+              m_Arguments:
+                m_ObjectArgument: {fileID: 919132149155446097, guid: 926044382f2f9424794b414d919af657, type: 3}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 5192830292604747806
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: 
+        m_ConditionList:
+          m_Conditions:
+          - rid: 5192830292604747807
+        m_InstructionList:
+          m_Instructions:
+          - rid: 5192830292604747808
+    - rid: 5192830292604747807
+      type: {class: ConditionMathCompareIntegers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 5192830292604747809
+        m_CompareTo:
+          m_Comparison: 3
+          m_CompareTo:
+            m_Property:
+              rid: 5192830292604747810
+    - rid: 5192830292604747808
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8164872615499909590}
+              m_TargetAssemblyTypeName: HerderController, Assembly-CSharp
+              m_MethodName: OnSpawnCharacter
+              m_Mode: 2
+              m_Arguments:
+                m_ObjectArgument: {fileID: 919132149155446097, guid: 671a7b1e060e044528aaaaf943db7b78, type: 3}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 5192830292604747809
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 88963d5a81f2e4005a94a476e4d551ee, type: 2}
+          m_Name:
+            m_String: CharactersSpawned
+            m_ID: 789249562
+    - rid: 5192830292604747810
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
 --- !u!1 &7151630777054275299
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +549,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1469956959857827403}
   m_Father: {fileID: 8164872615499909589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -682,12 +860,7 @@ MonoBehaviour:
   inSnow: 0
   ShovelingAction: {fileID: 4022591211595441167}
   skinLocation: {fileID: 7592360278191254921}
-  globalVars: {fileID: 0}
   shoveling: 0
-  costumeOptions:
-  - {fileID: 919132149155446097, guid: 671a7b1e060e044528aaaaf943db7b78, type: 3}
-  - {fileID: 919132149155446097, guid: 926044382f2f9424794b414d919af657, type: 3}
-  MateoSpawned: 0
 --- !u!33 &8164872615499909586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -900,8 +1073,8 @@ MonoBehaviour:
     m_Instructions:
     - rid: 5192830288359325726
     - rid: 5192830288359325731
-    - rid: 5192830292604747780
-    - rid: 5192830292604747784
+    - rid: 5192830292604747797
+    - rid: 5192830292604747791
   m_InBackground: 1
   m_TriggerEvent:
     rid: 5192830288359325722
@@ -942,53 +1115,59 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Signal:
           m_String: PlayerJoins
-    - rid: 5192830292604747780
-      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
-      data:
-        m_IsExpanded: 1
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Method:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 8164872615499909590}
-              m_TargetAssemblyTypeName: HerderController, Assembly-CSharp
-              m_MethodName: OnSpawnCharacter
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-    - rid: 5192830292604747784
-      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 5192830292604747791
+      type: {class: InstructionArithmeticAddNumbers, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Set:
           m_Property:
-            rid: 5192830292604747787
-        m_From:
+            rid: 5192830292604747792
+        m_Value1:
           m_Property:
-            rid: 5192830292604747786
-    - rid: 5192830292604747786
-      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 1
-    - rid: 5192830292604747787
-      type: {class: SetBoolGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+            rid: 5192830292604747795
+        m_Value2:
+          m_Property:
+            rid: 5192830292604747796
+    - rid: 5192830292604747792
+      type: {class: SetNumberGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:
         m_Variable:
           m_TypeID:
-            m_String: boolean
+            m_String: number
           m_Variable: {fileID: 11400000, guid: 88963d5a81f2e4005a94a476e4d551ee, type: 2}
           m_Name:
-            m_String: MateoSpawned
-            m_ID: -9990611
+            m_String: CharactersSpawned
+            m_ID: 789249562
+    - rid: 5192830292604747795
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 88963d5a81f2e4005a94a476e4d551ee, type: 2}
+          m_Name:
+            m_String: CharactersSpawned
+            m_ID: 789249562
+    - rid: 5192830292604747796
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 5192830292604747797
+      type: {class: InstructionLogicRunConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Property:
+            rid: 5192830292604747798
+        m_WaitToFinish: 1
+    - rid: 5192830292604747798
+      type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Conditions: {fileID: 968700001960164956}
 --- !u!114 &8882597858277892732
 MonoBehaviour:
   m_ObjectHideFlags: 0

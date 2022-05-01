@@ -21,8 +21,6 @@ public class HerderController : MonoBehaviour
 	private Actions ShovelingAction;
 	[SerializeField]
 	private Transform skinLocation;
-	[SerializeField]
-	private GlobalNameVariables globalVars;
 
 	private CharacterController controller;
 	private Vector3 playerVelocity;
@@ -32,9 +30,6 @@ public class HerderController : MonoBehaviour
 	private bool jumped = false;
 	[SerializeField]
 	private bool shoveling = false;
-	[SerializeField]
-	List<GameObject>	costumeOptions = new List<GameObject>();
-	public bool MateoSpawned = false;
 	
 	private void Start()
 	{
@@ -56,24 +51,11 @@ public class HerderController : MonoBehaviour
 		
 	}
 	
-	public void OnSpawnCharacter() {
-		if ( costumeOptions.Count > 0 ) {
-			int randomSkin = 0;
-			
-			if ( (bool)globalVars.Get("MateoSpawned") ){
-				randomSkin = Random.Range(1,costumeOptions.Count);
-			} else
-				randomSkin = 0;
-				
-			GameObject spawnedSkin = Instantiate(costumeOptions[randomSkin],skinLocation);
+	public void OnSpawnCharacter(GameObject spawnObject) {
+		GameObject spawnedSkin = Instantiate(spawnObject,skinLocation);
 			Vector3 newPosition = Vector3.zero;
 			spawnedSkin.transform.localPosition = newPosition;
 			
-			if (randomSkin == 0) {
-				//globalVars.Set("MateoSpawned", );
-				MateoSpawned = true;
-			}
-		}
 	}
 
 	void Update()
