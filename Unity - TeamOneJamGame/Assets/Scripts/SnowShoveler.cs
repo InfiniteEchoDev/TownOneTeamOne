@@ -23,13 +23,6 @@ public class SnowShoveler : MonoBehaviour
 		{
 			other.gameObject.GetComponent<BreakIce>().BreakingIce();
 		}
-		if ( other.tag == "Shovel" && playerController.shoveling)
-		{
-			if ( other.gameObject.GetComponent<SnowShoveler>().playerController.shoveling) {
-				Debug.Log("Llama call");
-				AIMgr.Instance.DirectAllLlamasAttentionOnPoint( transform.position );
-			}
-		}
 		
 	}
 

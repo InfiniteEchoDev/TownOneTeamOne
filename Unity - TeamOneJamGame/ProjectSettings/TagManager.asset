@@ -7,6 +7,7 @@ TagManager:
   - Snow
   - Ice
   - Shovel
+  - CallHerd
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - Water
   - UI
   - MouseClickSurface
-  - 
-  - 
+  - CallHerd
+  - Obstacle
   - 
   - 
   - 
