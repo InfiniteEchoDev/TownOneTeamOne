@@ -8,7 +8,9 @@ public class SnowShoveler : MonoBehaviour
 	private GameObject snowBlock;
 	[SerializeField]
 	private bool hasSnow;
-	
+	[SerializeField]
+	GameObject vfx;
+
 	public HerderController	playerController;
     
 	private void OnTriggerStay(Collider other)
@@ -23,6 +25,13 @@ public class SnowShoveler : MonoBehaviour
 		{
 			other.gameObject.GetComponent<BreakIce>().BreakingIce();
 		}
+		if ( other.tag == "Crevice" ) {
+			//other.gameObject
+			other.gameObject.GetComponent<CreviceBlock>().PutShovel(playerController);
+		}
+		if ( other.tag == "PickUpPoints" ) {
+			other.gameObject.GetComponent<ShovelPickup>().GetShovel(playerController);
+		}
 		
 	}
 
@@ -34,4 +43,10 @@ public class SnowShoveler : MonoBehaviour
 			hasSnow = false;
 		}
 	}
+
+	public void destroySnow()
+	{
+		Instantiate(vfx, snowBlock.transform.position, Quaternion.identity);
+	}
+
 }

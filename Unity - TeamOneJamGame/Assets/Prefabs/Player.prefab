@@ -197,7 +197,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1140,7 +1140,7 @@ MonoBehaviour:
       type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
       data:
-        m_IsExpanded: 0
+        m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_Set:
@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 4145714807853542744}
   m_Layer: 23
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1420,13 +1420,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f54333b17a2f4b75a23d434353e245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 3
+  playerSpeed: 6
+  snowSpeed: 1
   jumpHeight: 1
   gravityValue: -9.81
   inSnow: 0
   ShovelingAction: {fileID: 4022591211595441167}
   skinLocation: {fileID: 7592360278191254921}
+  hasShovel: 1
   shoveling: 0
+  shovelObject: {fileID: 0}
 --- !u!33 &8164872615499909586
 MeshFilter:
   m_ObjectHideFlags: 0

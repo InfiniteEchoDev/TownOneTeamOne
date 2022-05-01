@@ -12,6 +12,8 @@ public class HerderController : MonoBehaviour
 	[SerializeField]
 	private float playerSpeed = 2.0f;
 	[SerializeField]
+	private float snowSpeed = 1.0f;
+	[SerializeField]
 	private float jumpHeight = 1.0f;
 	[SerializeField]
 	private float gravityValue = -9.81f;
@@ -29,11 +31,16 @@ public class HerderController : MonoBehaviour
 	private Vector2 movementInput = Vector2.zero;
 	private bool jumped = false;
 	
+	public bool hasShovel = true;
 	public bool shoveling = false;
+	public GameObject shovelObject;
+	
+	float currentSpeeed;
 	
 	private void Start()
 	{
 		controller = gameObject.GetComponent<CharacterController>();
+		currentSpeeed = playerSpeed;
 	}
 	
 	public void OnMove(InputAction.CallbackContext context) {
@@ -47,7 +54,8 @@ public class HerderController : MonoBehaviour
 	
 	public void OnShovel(InputAction.CallbackContext context) {
 		//shoveling = context.ReadValue<bool>();
-		shoveling = context.action.IsPressed();
+		if ( hasShovel )
+			shoveling = context.action.IsPressed();
 		
 	}
 	
@@ -68,7 +76,7 @@ public class HerderController : MonoBehaviour
 	{
 		if (other.tag == "Snow")
 		{
-			playerSpeed = 1f;
+			currentSpeeed = snowSpeed;
 		}
 	}
 
@@ -76,12 +84,12 @@ public class HerderController : MonoBehaviour
 	{
 		if (other.tag == "Snow")
 		{
-			playerSpeed = 3f;
+			currentSpeeed = playerSpeed;
 		}
 	}
 	
 	public void ResumeSpeed(){
-		playerSpeed = 3f;
+		currentSpeeed = playerSpeed;
 	}
 
 	void Update()
@@ -93,7 +101,7 @@ public class HerderController : MonoBehaviour
 		}
 
 		Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
-		controller.Move(move * Time.deltaTime * playerSpeed);
+		controller.Move(move * Time.deltaTime * currentSpeeed);
 
 		if (move != Vector3.zero)
 		{
@@ -106,7 +114,7 @@ public class HerderController : MonoBehaviour
 			playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
 		}
 
-		if (shoveling) {
+		if (shoveling && hasShovel) {
 			ShovelingAction.Invoke(ShovelingAction.gameObject);
 		}
 

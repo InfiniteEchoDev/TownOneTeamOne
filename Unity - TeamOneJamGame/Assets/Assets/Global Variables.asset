@@ -22,9 +22,27 @@ MonoBehaviour:
     m_Source:
     - rid: 5192830288359325723
     - rid: 5192830292604747788
+    - rid: 2484445518776238118
   references:
     version: 2
     RefIds:
+    - rid: 2484445518776238118
+      type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value:
+          rid: 2484445518776238120
+        m_Name:
+          m_String: InPause
+    - rid: 2484445518776238120
+      type: {class: ValueBool, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Value: 0
     - rid: 5192830288359325723
       type: {class: NameVariable, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
       data:

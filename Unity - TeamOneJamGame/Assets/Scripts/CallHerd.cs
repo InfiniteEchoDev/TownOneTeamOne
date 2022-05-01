@@ -15,7 +15,7 @@ public class CallHerd : MonoBehaviour
     
 	private void OnTriggerStay(Collider other)
 	{
-		if ( other.tag == "CallHerd" && playerController.shoveling && !jumping)
+		if ( other.tag == "CallHerd" && playerController.shoveling && playerController.hasShovel && !jumping)
 		{
 			if ( other.gameObject.GetComponent<CallHerd>().playerController.shoveling) {
 				Debug.Log("Llama call");

@@ -13,22 +13,27 @@ public class BreakIce : MonoBehaviour {
 	float timer = 0f;
 	bool onCooldown = false;
 
+ 	[SerializeField]
+	GameObject vfx;
+	
 	// Update is called once per frame
-	void Update() {
-		if( onCooldown ) {
-			timer -= Time.deltaTime;
-			if( timer < 0f ) {
-				onCooldown = false;
-				currentBreaks++;
-				if( currentBreaks >= breakLimit ) {
-					Destroy( this.gameObject );
+    void Update()
+    {
+	    if (onCooldown){
+	    	timer -= Time.deltaTime;
+	    	if ( timer < 0f ) {
+	    		onCooldown = false;
+	    		currentBreaks++;
+				Instantiate(vfx, transform.position, Quaternion.identity);
+				if ( currentBreaks >= breakLimit)
+                {
+					Destroy(this.gameObject);
 
 					AIMgr.Instance.UpdateLlamaAgentNavMeshDataNextFrame();
-				}
-			}
-		}
-	}
-
+                }
+	    	}
+	    }
+    }
 	public void BreakingIce() {
 		if( !onCooldown ) {
 			timer = breakCooldown;
