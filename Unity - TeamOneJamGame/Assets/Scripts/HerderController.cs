@@ -58,6 +58,12 @@ public class HerderController : MonoBehaviour
 			
 	}
 
+	public void OnActivateWhistle( InputAction.CallbackContext context ) {
+		if( context.action.triggered ) {
+			AIMgr.Instance.DirectAllLlamasAttentionOnPoint( transform.position );
+		}
+	}
+
 	void Update()
 	{
 		groundedPlayer = controller.isGrounded;

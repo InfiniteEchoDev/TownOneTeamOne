@@ -3,18 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Snow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
-  - 
-  - 
-  - PostProcessing
-  - 
+  - MouseClickSurface
   - 
   - 
   - 
@@ -26,6 +24,9 @@ TagManager:
   - 
   - 
   - 
+  - 
+  - 
+  - Llamas
   - 
   - 
   - 
