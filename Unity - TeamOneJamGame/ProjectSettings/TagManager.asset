@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Snow
+  - Ice
+  - Shovel
+  - CallHerd
   layers:
   - Default
   - TransparentFX
@@ -12,6 +15,8 @@ TagManager:
   - Floor
   - Water
   - UI
+  - MouseClickSurface
+  - CallHerd
   - Obstacle
   - 
   - 
@@ -24,9 +29,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Llamas
   - 
   - 
   - 

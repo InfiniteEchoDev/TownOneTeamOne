@@ -8,6 +8,8 @@ public class SnowShoveler : MonoBehaviour
 	private GameObject snowBlock;
 	[SerializeField]
 	private bool hasSnow;
+	
+	public HerderController	playerController;
     
 	private void OnTriggerStay(Collider other)
 	{
@@ -17,6 +19,11 @@ public class SnowShoveler : MonoBehaviour
 			snowBlock = other.gameObject;
 			hasSnow = true;
 		}
+		if ( other.tag == "Ice" && playerController.shoveling)
+		{
+			other.gameObject.GetComponent<BreakIce>().BreakingIce();
+		}
+		
 	}
 
 	private void OnTriggerExit(Collider other)
