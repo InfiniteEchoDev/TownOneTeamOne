@@ -9,11 +9,22 @@ public class SnowShoveler : MonoBehaviour
 	[SerializeField]
 	private bool hasSnow;
     
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerStay(Collider other)
 	{
 		if ( other.tag == "Snow")
 		{
+			//Debug.Log("snow detected");
 			snowBlock = other.gameObject;
+			hasSnow = true;
+		}
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if ( other.tag == "Snow")
+		{
+			snowBlock = null;
+			hasSnow = false;
 		}
 	}
 }

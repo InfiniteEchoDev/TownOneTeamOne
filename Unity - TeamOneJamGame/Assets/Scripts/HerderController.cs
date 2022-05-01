@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using GameCreator.Runtime.Common;
+using GameCreator.Runtime.VisualScripting;
+using GameCreator.Runtime.Variables;
 
 [RequireComponent(typeof(CharacterController))]
 public class HerderController : MonoBehaviour
@@ -14,6 +17,10 @@ public class HerderController : MonoBehaviour
 	private float gravityValue = -9.81f;
 	[SerializeField]
 	private bool inSnow = false;
+	[SerializeField]
+	private Actions ShovelingAction;
+	[SerializeField]
+	private Transform skinLocation;
 
 	private CharacterController controller;
 	private Vector3 playerVelocity;
@@ -21,8 +28,9 @@ public class HerderController : MonoBehaviour
 	
 	private Vector2 movementInput = Vector2.zero;
 	private bool jumped = false;
+	[SerializeField]
+	private bool shoveling = false;
 	
-
 	private void Start()
 	{
 		controller = gameObject.GetComponent<CharacterController>();
@@ -35,6 +43,19 @@ public class HerderController : MonoBehaviour
 	public void OnJump(InputAction.CallbackContext context) {
 		jumped = context.ReadValue<bool>();
 		jumped = context.action.triggered;
+	}
+	
+	public void OnShovel(InputAction.CallbackContext context) {
+		//shoveling = context.ReadValue<bool>();
+		shoveling = context.action.IsPressed();
+		
+	}
+	
+	public void OnSpawnCharacter(GameObject spawnObject) {
+		GameObject spawnedSkin = Instantiate(spawnObject,skinLocation);
+			Vector3 newPosition = Vector3.zero;
+			spawnedSkin.transform.localPosition = newPosition;
+			
 	}
 
 	void Update()
@@ -57,6 +78,10 @@ public class HerderController : MonoBehaviour
 		if (jumped && groundedPlayer)
 		{
 			playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+		}
+
+		if (shoveling) {
+			ShovelingAction.Invoke(ShovelingAction.gameObject);
 		}
 
 		playerVelocity.y += gravityValue * Time.deltaTime;
