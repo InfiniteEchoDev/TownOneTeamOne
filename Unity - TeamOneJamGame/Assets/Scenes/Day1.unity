@@ -18884,6 +18884,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165195480}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1166231056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3345376796201287049, guid: 41127bcd0457d463eac20fc8d566b2a3, type: 3}
+  m_PrefabInstance: {fileID: 2060037402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1170026291
 GameObject:
   m_ObjectHideFlags: 0
@@ -21195,13 +21200,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298993343}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Instructions:
-    m_Instructions: []
+    m_Instructions:
+    - rid: 4960561758833213477
   m_InBackground: 1
   m_TriggerEvent:
     rid: 4960561758833213472
@@ -21215,14 +21221,37 @@ MonoBehaviour:
           m_Option: 1
           m_GameObject:
             m_Property:
-              rid: 4960561758833213473
+              rid: 4960561758833213478
         m_UseRaycast:
           m_UseRaycast: 0
           m_LayerMask:
             serializedVersion: 2
             m_Bits: 4294967295
-    - rid: 4960561758833213473
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 4960561758833213477
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1298993343}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+    - rid: 4960561758833213478
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 3866589762531906605, guid: 803f923deacb54a0cb5152d5939f8dfe, type: 3}
 --- !u!1 &1303447921
 GameObject:
   m_ObjectHideFlags: 0
@@ -29786,6 +29815,119 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795989699}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1797866308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164872615499909585, guid: 260bf26b19ed14d1383f628c6dd2a8ea, type: 3}
+  m_PrefabInstance: {fileID: 1778509383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1797866319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797866308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 4960561758833213489
+  m_InBackground: 1
+  m_TriggerEvent:
+    rid: 4960561758833213490
+  references:
+    version: 2
+    RefIds:
+    - rid: 4960561758833213489
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1298993346}
+              m_TargetAssemblyTypeName: Doozy.Runtime.UIManager.Containers.UIContainer,
+                DoozyRuntime
+              m_MethodName: Show
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+    - rid: 4960561758833213490
+      type: {class: EventTriggerEnter, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Collider:
+          m_Option: 0
+          m_GameObject:
+            m_Property:
+              rid: 4960561758833213492
+    - rid: 4960561758833213492
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 1166231056}
+--- !u!114 &1797866320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797866308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 4960561758833213496
+  m_InBackground: 0
+  m_TriggerEvent:
+    rid: 4960561758833213494
+  references:
+    version: 2
+    RefIds:
+    - rid: 4960561758833213494
+      type: {class: EventTriggerExit, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Collider:
+          m_Option: 0
+          m_GameObject:
+            m_Property:
+              rid: 4960561758833213495
+    - rid: 4960561758833213495
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 4960561758833213496
+      type: {class: InstructionLogicCallMethod, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Method:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1298993346}
+              m_TargetAssemblyTypeName: Doozy.Runtime.UIManager.Containers.UIContainer,
+                DoozyRuntime
+              m_MethodName: Hide
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
 --- !u!1 &1807213388
 GameObject:
   m_ObjectHideFlags: 0
