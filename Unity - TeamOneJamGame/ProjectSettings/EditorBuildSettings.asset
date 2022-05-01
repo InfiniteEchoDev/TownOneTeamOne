@@ -6,9 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Plugins/Ultra Fast PostProcessing/Example Scenes/URP Examples (Not
+      Optimized)/Scenes/SampleScene.unity
+    guid: 27e6dac70a07e7f45b71692e1b497067
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 211be25b1866e6146b9e943d7e2def53
+    path: Assets/Plugins/EMParticlesLowpoly/Example Scenes/Scenes/Demo 2019.unity
+    guid: d72496db2667bb64fb01465b55bc1579
   m_configObjects: {}
