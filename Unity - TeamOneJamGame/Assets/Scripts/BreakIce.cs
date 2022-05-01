@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakIce : MonoBehaviour
-{
-	
+public class BreakIce : MonoBehaviour {
+
 	[SerializeField]
 	float breakCooldown = 1f;
 	[SerializeField]
@@ -13,23 +12,25 @@ public class BreakIce : MonoBehaviour
 	int currentBreaks = 0;
 	float timer = 0f;
 	bool onCooldown = false;
-	
+
 	// Update is called once per frame
-    void Update()
-    {
-	    if (onCooldown){
-	    	timer -= Time.deltaTime;
-	    	if ( timer < 0f ) {
-	    		onCooldown = false;
-	    		currentBreaks++;
-	    		if ( currentBreaks >= breakLimit)
-	    			Destroy(this.gameObject);
-	    	}
-	    }
-    }
-    
+	void Update() {
+		if( onCooldown ) {
+			timer -= Time.deltaTime;
+			if( timer < 0f ) {
+				onCooldown = false;
+				currentBreaks++;
+				if( currentBreaks >= breakLimit ) {
+					Destroy( this.gameObject );
+
+					AIMgr.Instance.UpdateLlamaAgentNavMeshDataNextFrame();
+				}
+			}
+		}
+	}
+
 	public void BreakingIce() {
-		if ( !onCooldown ) {
+		if( !onCooldown ) {
 			timer = breakCooldown;
 			onCooldown = true;
 		}
