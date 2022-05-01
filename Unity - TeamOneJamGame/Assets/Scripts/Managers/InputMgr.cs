@@ -21,7 +21,7 @@ public class InputMgr : Singleton<InputMgr> {
 
 		//Debug.Log( CameraMgr.Instance );
 
-		if( Mouse.current.leftButton.wasPressedThisFrame )
+		if( Mouse.current.leftButton.isPressed )
 			//if( Keyboard.current.spaceKey.wasPressedThisFrame )
 			//if( Input.GetMouseButtonDown( 0 ) )
 			if( Physics.Raycast(
