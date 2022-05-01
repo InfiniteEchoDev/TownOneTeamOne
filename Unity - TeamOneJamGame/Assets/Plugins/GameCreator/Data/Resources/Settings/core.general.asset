@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: core.general
   m_EditorClassIdentifier: 
   m_Repository:
-    rid: 4960561758833213440
+    rid: 9007358710961143808
   references:
     version: 2
     RefIds:
-    - rid: 4960561758833213440
+    - rid: 9007358710961143808
       type: {class: GeneralRepository, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Audio:
