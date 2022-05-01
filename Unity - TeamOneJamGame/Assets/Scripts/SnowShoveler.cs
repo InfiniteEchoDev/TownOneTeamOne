@@ -24,6 +24,7 @@ public class SnowShoveler : MonoBehaviour
 			other.gameObject.GetComponent<BreakIce>().BreakingIce();
 		}
 		if ( other.tag == "Crevice" ) {
+			//other.gameObject
 			other.gameObject.GetComponent<CreviceBlock>().PutShovel(playerController);
 		}
 		if ( other.tag == "PickUpPoints" ) {
