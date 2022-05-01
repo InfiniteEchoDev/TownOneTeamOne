@@ -13,6 +13,8 @@ public class BreakIce : MonoBehaviour
 	int currentBreaks = 0;
 	float timer = 0f;
 	bool onCooldown = false;
+	[SerializeField]
+	GameObject vfx;
 	
 	// Update is called once per frame
     void Update()
@@ -22,8 +24,11 @@ public class BreakIce : MonoBehaviour
 	    	if ( timer < 0f ) {
 	    		onCooldown = false;
 	    		currentBreaks++;
-	    		if ( currentBreaks >= breakLimit)
-	    			Destroy(this.gameObject);
+				Instantiate(vfx, transform.position, Quaternion.identity);
+				if ( currentBreaks >= breakLimit)
+                {
+					Destroy(this.gameObject);
+                }
 	    	}
 	    }
     }
