@@ -348,6 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowBlock: {fileID: 0}
   hasSnow: 0
+  vfx: {fileID: 0}
   playerController: {fileID: 8164872615499909590}
 --- !u!114 &4022591211595441167
 MonoBehaviour:
@@ -484,6 +485,52 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
+    - rid: 2484445518776238196
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 2484445518776238197
+          usePooling: 0
+          size: 5
+          hasDuration: 0
+          duration: 10
+        m_Location:
+          m_Property:
+            rid: 2484445518776238204
+        m_Parent:
+          m_Property:
+            rid: 2484445518776238199
+        m_Save:
+          m_Property:
+            rid: 2484445518776238200
+    - rid: 2484445518776238197
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 5412371043930731981, guid: 778782f9b1dc0b64d97c22475ea72039,
+          type: 3}
+    - rid: 2484445518776238199
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 2484445518776238200
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 2484445518776238204
+      type: {class: GetLocationGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject:
+          m_Property:
+            rid: 2484445518776238206
+        m_Rotate: 0
+    - rid: 2484445518776238206
+      type: {class: GetGameObjectReflectionFieldObject, ns: GameCreator.Runtime.Common,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_Field:
+          m_Component: {fileID: 2025098988638524291}
+          m_Member: snowBlock
     - rid: 5192830288359325852
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -496,6 +543,7 @@ MonoBehaviour:
           - rid: 5192830288359325853
         m_InstructionList:
           m_Instructions:
+          - rid: 2484445518776238196
           - rid: 5192830288359325857
           - rid: 5192830288359325860
           - rid: 2484445511537393688
@@ -984,6 +1032,7 @@ MonoBehaviour:
     - rid: 2484445518776238086
     - rid: 2484445518776238080
     - rid: 2484445518776238089
+    - rid: 2484445518776238189
     - rid: 2484445518776238092
     - rid: 2484445518776238095
     - rid: 2484445518776238098
@@ -1159,6 +1208,49 @@ MonoBehaviour:
         m_Field:
           m_Component: {fileID: 5818001469578764584}
           m_Member: jumping
+    - rid: 2484445518776238189
+      type: {class: InstructionGameObjectInstantiate, ns: GameCreator.Runtime.VisualScripting,
+        asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 2484445518776238190
+          usePooling: 0
+          size: 5
+          hasDuration: 0
+          duration: 10
+        m_Location:
+          m_Property:
+            rid: 2484445518776238194
+        m_Parent:
+          m_Property:
+            rid: 2484445518776238192
+        m_Save:
+          m_Property:
+            rid: 2484445518776238193
+    - rid: 2484445518776238190
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 5838736210519726237, guid: d2c273f8507256b4bb7a98467b7c4c56,
+          type: 3}
+    - rid: 2484445518776238192
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 2484445518776238193
+      type: {class: SetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 2484445518776238194
+      type: {class: GetLocationGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject:
+          m_Property:
+            rid: 2484445518776238195
+        m_Rotate: 0
+    - rid: 2484445518776238195
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 7581138228848203612}
 --- !u!1 &8164872613966389972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8164872615499909585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.01, y: 1.066, z: -15.26}
+  m_LocalPosition: {x: -17.76, y: 2.1, z: -10.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
