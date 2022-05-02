@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.AI;
+using Unity.AI.Navigation;
 using UnityEngine.InputSystem;
 
 
@@ -27,37 +28,42 @@ public class AIMgr : Singleton<AIMgr> {
 
 
 
-	//NavMeshAgent llamaAgentRef;
+	[Header( "Obj Refs" )]
+	public NavMeshSurfaceController LlamaAgentNavMeshSurfaceController;
+
 
 	private void Start() {
 
 		if( Llamas.Count == 0 )
 			Llamas.AddRange( FindObjectsOfType<Llama>() );
 
-		//foreach( Llama llama in Llamas ) {
-		//	llamaAgent = llama.GetComponent<NavMeshAgent>();
-		//	llamaAgent.SetDestination( new Vector3( 0, 0, 10 ) );
-		//}
-
 		InputMgr.Instance.OnMouseClickOnUILayer +=
 			( Vector3 clickPoint ) => {
 				DirectAllLlamasAttentionOnPoint( clickPoint );
 			};
+
+		UpdateLlamaAgentNavMeshData();
 	}
 
 	public void DirectAllLlamasAttentionOnPoint( Vector3 pointForAttention ) {
 		foreach( Llama llama in Llamas ) {
-			//llamaAgentRef = llama.GetComponent<NavMeshAgent>();
-			//llamaAgentRef.SetDestination( clickPoint );
 			llama.BeginAttentionOnPoint( pointForAttention );
 		}
 	}
-	//public void DirectAllLlamasAttentionOnPlayer( InputAction.CallbackContext playerContext ) {
-	//}
 
-	public static void TestFcn( Vector3 pointForAttention ) {
-		foreach( Llama llama in FindObjectsOfType<Llama>() ) {
-			llama.BeginAttentionOnPoint( pointForAttention );
-		}
+
+	public void UpdateLlamaAgentNavMeshData() {
+		LlamaAgentNavMeshSurfaceController.RebakeNavMesh();
 	}
+
+	public void UpdateLlamaAgentNavMeshDataNextFrame() {
+		StartCoroutine( UpdateLlamaAgentNavMeshDataNextFrameCoroutine() );
+	}
+	IEnumerator UpdateLlamaAgentNavMeshDataNextFrameCoroutine() {
+		yield return 0;
+
+		UpdateLlamaAgentNavMeshData();
+	}
+
+
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3866589762531906601}
   - component: {fileID: 3866589762531906602}
   - component: {fileID: 3866589762531906603}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Snow Block
   m_TagString: Snow
   m_Icon: {fileID: 0}

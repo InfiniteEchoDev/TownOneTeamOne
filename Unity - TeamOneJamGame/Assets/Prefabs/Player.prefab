@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727848014661152776}
   - component: {fileID: 5655204856682854282}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Camera Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1062922933479626483}
   - component: {fileID: 8866323376761369895}
   - component: {fileID: 8967426600957875407}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 2025098988638524291}
   - component: {fileID: 4022591211595441167}
   - component: {fileID: 3397466999337577718}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Shovel Collider
   m_TagString: Shovel
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592360278191254921}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: SkinLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469956959857827403}
   - component: {fileID: 968700001960164956}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: SpawnConditions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2674477226109639690}
   - component: {fileID: 6958198109723392927}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Player Variables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1260,7 +1260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8164872613966389975}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Shovel View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1295,7 @@ GameObject:
   - component: {fileID: 8164872613972158206}
   - component: {fileID: 8164872613972158195}
   - component: {fileID: 8164872613972158192}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,7 +1379,7 @@ GameObject:
   - component: {fileID: 8164872614596849233}
   - component: {fileID: 8164872614596849234}
   - component: {fileID: 8164872614596849235}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,9 +1471,9 @@ GameObject:
   - component: {fileID: -6380902050707467676}
   - component: {fileID: 1388626778683877094}
   - component: {fileID: 4145714807853542744}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2214,6 +2214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shovel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9cc728ae270a4a50b3c8823c0fed59e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9cc728ae270a4a50b3c8823c0fed59e, type: 3}
