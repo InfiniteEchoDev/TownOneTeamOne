@@ -348,6 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowBlock: {fileID: 0}
   hasSnow: 0
+  vfx: {fileID: 0}
   playerController: {fileID: 8164872615499909590}
 --- !u!114 &4022591211595441167
 MonoBehaviour:
@@ -1381,7 +1382,7 @@ GameObject:
   - component: {fileID: 4145714807853542744}
   m_Layer: 23
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
