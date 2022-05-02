@@ -1655,7 +1655,6 @@ MonoBehaviour:
   m_Instructions:
     m_Instructions:
     - rid: 5192830288359325726
-    - rid: 5192830288359325731
     - rid: 5192830292604747797
     - rid: 5192830292604747791
   m_InBackground: 1
@@ -1691,15 +1690,6 @@ MonoBehaviour:
             m_ID: 1611866147
     - rid: 5192830288359325730
       type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-    - rid: 5192830288359325731
-      type: {class: InstructionLogicRaiseSignal, ns: GameCreator.Runtime.VisualScripting,
-        asm: GameCreator.Runtime.Core}
-      data:
-        m_IsExpanded: 0
-        m_Breakpoint: 0
-        m_IsEnabled: 1
-        m_Signal:
-          m_String: PlayerJoins
     - rid: 5192830292604747791
       type: {class: InstructionArithmeticAddNumbers, ns: GameCreator.Runtime.VisualScripting,
         asm: GameCreator.Runtime.Core}
