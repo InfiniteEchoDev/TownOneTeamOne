@@ -8,7 +8,9 @@ public class SnowShoveler : MonoBehaviour
 	private GameObject snowBlock;
 	[SerializeField]
 	private bool hasSnow;
-	
+	[SerializeField]
+	GameObject vfx;
+
 	public HerderController	playerController;
     
 	private void OnTriggerStay(Collider other)
@@ -34,4 +36,10 @@ public class SnowShoveler : MonoBehaviour
 			hasSnow = false;
 		}
 	}
+
+	public void destroySnow()
+	{
+		Instantiate(vfx, snowBlock.transform.position, Quaternion.identity);
+	}
+
 }
